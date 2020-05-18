@@ -31,7 +31,10 @@
         
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal" >
+                   <!-- <a data-toggle="modal" data-target="#loginModal" >
+                            <span class="fa fa-sign-in"></span>Login
+                        </a></span>-->  
+                        <a href="#loginModal1" type="button" >
                             <span class="fa fa-sign-in"></span>Login
                         </a></span>
                 </div>
@@ -39,15 +42,15 @@
             </div>
         </nav>
 
-        <div id="loginModal" class="modal fade" role="dialog">
+        <div id="loginModal1" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header navbar-dark">
                         <h4 class="modal-title">Login </h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body ">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-4">
@@ -91,7 +94,9 @@
                     <div class="col col-sm align-self-center">
                         <div class="text-center " >
                              
-                            <a data-toggle="modal"  data-target="#loginModal2" class="btn btn-warning   btn-block"  role="button"><i></i> Reserve Table</a>
+                        <!--<a data-toggle="modal"  data-target="#loginModal2" class="btn btn-warning   btn-block"  role="button"><i></i> Reserve Table</a>-->    
+                            <a id="launchloginModal2" class="btn btn-warning   btn-block"  role="button"><i></i> Reserve Table</a>
+
                         </div>
                     </div>
                 </div>
@@ -201,11 +206,11 @@
             <div class="modal-dialog modal-lg" role="content">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header  navbar-dark">
                         <h4 class="modal-title">Reserve a Table </h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" >
                         <form>
                             <div class="form-group row">
                                 <p class="col-md-2 col-form-label">Number of Guests</p>
@@ -386,6 +391,22 @@
                 }
             });
          
+            });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $('#launchloginModal2').click(function(){
+                    $('#loginModal2').modal('show');
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $('[href="#loginModal1"]').click(function(){
+                    $('#loginModal1').modal('show');
+                });
             });
         </script>
     </body>
